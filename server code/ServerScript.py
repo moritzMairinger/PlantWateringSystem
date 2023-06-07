@@ -17,7 +17,7 @@ class RequestHandler_httpd(BaseHTTPRequestHandler):
     Request = Request[5 : int(len(Request)-9)]
     print('Your request is: ')
     print(Request)
-    MyFile = open('data.csv','a')
+    MyFile = open('../sensor data/data.csv','a')
     #MyFile.write((''.join([str(x) for x in ['DATA;', Request, ';\n']])))
     MyFile.write(counter, ';', Request, ';\n')
     MyFile.close()
